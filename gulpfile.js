@@ -3,6 +3,7 @@ var   gulp = require('gulp')
     , uglify = require('gulp-uglify')
     , source = require('vinyl-source-stream')
     , buffer = require('vinyl-buffer')
+    , shell = require('gulp-shell')
 ;
 
 var src = 'src/main.js'
@@ -28,6 +29,10 @@ gulp.task('compress', function(){
         ;
 });
 
+
+gulp.task( 'doc', shell.task( [
+  './node_modules/jsdoc/jsdoc.js src/notePlayer.js -d doc/ -P package.json -R README.md '
+] ) );
 
 
 gulp.task('watch', function() {
