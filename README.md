@@ -2,22 +2,25 @@ NOTEPLAYER.JS
 ===
 
 ## Installation:
-
-    git clone
-    npm install
-
-
-## Node.js module
+You may import the code into an existing node.js project or import it directly into your HTML code
+- Node module import
+```shell
+# local install to your project
+npm install --save-dev notePlayer
+```
 ```javascript
+// import module into your js code
 var np = require('notePlayer') 
 ```
-
-## plain JS import
+- plain JS import
 ```html
+<!-- minified version, not human friendly, 55kb-->
 <script type="text/javascript" src="https://cdn.rawgit.com/laopunk/notePlayer/master/lib/notePlayer.min.js"></script>
+<!-- uncompressed version, human friendly, 416kb -->
+<script type="text/javascript" src="https://cdn.rawgit.com/laopunk/notePlayer/master/lib/notePlayer.js"></script>
 ```
+The module is instanciated in the object np, which you can use right away
 ```javascript
-//the module is instanciated in the object np, which you can use right away
 np.buildFromName("C4").play()
 ```
 
@@ -59,8 +62,9 @@ There are several ways to instanciate the class:
  })
  ```
 
-Setters: 
-- `setAudioContext(audioContext)`
-- `setDestinationNode(node)`
-- `setDuration(duration)`
-- `setVolume(volume)`
+- Setters: 
+	- `setAudioContext(audioContext)`
+	- `setDestinationNode(node)`
+	- `setDuration(duration)`
+	- `setVolume(volume)`
+	- `setVerbose(bool)`
