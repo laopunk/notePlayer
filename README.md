@@ -6,11 +6,11 @@ You may import the code into an existing node.js project or import it directly i
 - Node module import
 ```shell
 # local install to your project
-npm install --save-dev notePlayer
+npm install --save-dev noteplayer
 ```
 ```javascript
 // import module into your js code
-var np = require('notePlayer') 
+var np = require('noteplayer') 
 ```
 - plain JS import
 ```html
