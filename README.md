@@ -15,9 +15,9 @@ var np = require('noteplayer')
 - plain JS import
 ```html
 <!-- minified version, not human friendly, 55kb-->
-<script type="text/javascript" src="https://cdn.rawgit.com/laopunk/notePlayer/master/lib/notePlayer.min.js"></script>
+<script type="text/javascript" src="notePlayer.min.js"></script>
 <!-- uncompressed version, human friendly, 416kb -->
-<script type="text/javascript" src="https://cdn.rawgit.com/laopunk/notePlayer/master/lib/notePlayer.js"></script>
+<script type="text/javascript" src="notePlayer.js"></script>
 ```
 The module is instanciated in the object np, which you can use right away
 ```javascript
