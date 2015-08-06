@@ -36,8 +36,8 @@ gulp.task( 'doc', shell.task( [
 
 
 gulp.task('watch', function() {
-    gulp.watch(src, ['build','compress']);
+    gulp.watch([src,'src/notePlayer.js'], ['build','compress','doc']);
 });
 
-gulp.task('default', ['build','compress','watch']);
+gulp.task('default', ['build','compress','doc','watch']);
 
