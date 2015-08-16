@@ -196,7 +196,7 @@ notePlayer.prototype.play = function(callback) {
     t_np = this
     setTimeout(function(){
         if(t_np.verbose){console.log("Note "+t_np.name+" has finished playing")}
-        oscillator.stop()
+        oscillator.stop(0)
     }, this.duration * 1000); //leaving time for the fadeout
 
     oscillator.onended = function() {
