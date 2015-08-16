@@ -190,7 +190,7 @@ notePlayer.prototype.play = function(callback) {
     oscillator.connect(gainNode)
     gainNode.connect(this.destinationNode)
     //launch play
-    oscillator.start()
+    oscillator.start(0)
 
     //event listeners
     t_np = this
