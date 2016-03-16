@@ -68,3 +68,5 @@ There are several ways to instanciate the class:
 	- `setDuration(duration)`
 	- `setVolume(volume)`
 	- `setVerbose(bool)`
+	- `setAttack(duration)`
+	- `setRelease(duration)`
