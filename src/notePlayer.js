@@ -184,7 +184,12 @@ notePlayer.prototype.play = function(callback) {
     var oscillator = this.audioContext.createOscillator()
     oscillator.frequency.value = this.frequency
     var gainNode = this.audioContext.createGain()
-    gainNode.gain.value = this.volume
+    if (this.attack) {
+      gainNode.gain.linearRampToValueAtTime(this.volume, this.audioContext.currentTime + this.attack);
+      gainNode.gain.setTargetAtTime(0, this.audioContext.currentTime + this.attack, this.release || this.attack);
+    } else {
+      gainNode.gain.value = this.volume
+    }
 
     //Connections
     oscillator.connect(gainNode)
