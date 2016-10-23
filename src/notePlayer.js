@@ -207,6 +207,7 @@ notePlayer.prototype.play = function(callback) {
     oscillator.onended = function() {
         if( callback ) { callback() }
     }
+    return oscillator;
 };
 
 /**
