@@ -1,6 +1,6 @@
 {
   "name": "noteplayer",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "WebAudio musical audio note player",
   "author": "laopunk",
   "devDependencies": {

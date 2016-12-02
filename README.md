@@ -57,10 +57,12 @@ There are several ways to instanciate the class:
   Plays the note
  ```javascript
  n = np.buildFromName("A4")
- n.play(function(){
+ o = n.play(function(){
    console.log("end play")
  })
  ```
+  The note will be played for a given duration (random by default, or using setDuration() ).
+  The function however returns the oscillator itself, which you can use to call for stop() should you want to stop the sound at an earlier time (courtesy of [Jag](https://github.com/jag82))
 
 - Setters: 
 	- `setAudioContext(audioContext)`

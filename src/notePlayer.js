@@ -179,6 +179,7 @@ notePlayer.getNotesInfo = function(){
  * @description plays the note
  * @example play(function(){console.log("end play")})
  * @param {Function} [callback]         - callback function
+ * @returns {Object} Oscillator
  */
 notePlayer.prototype.play = function(callback) {
     if (this.verbose){
